@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3fbde0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #147cd6;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+    width: 400px;
+    box-shadow: 0 0 10px 5px rgb(100, 100, 100, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+h2 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+
+.row>.password {
+    margin-bottom: 30px;
+}
+
+.row>p {
+    margin-bottom: 3px;
+    color: rgb(236, 247, 246);
+}
+
+button {
+    border-color: #e2aeae;
+    background-color: #e2aeae;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+input {
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: #e2aeae;
+}
+
+div.messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.messages {
+    list-style: none;
+    min-width: 600px;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 16px;
+}
+
+ul.messages * {
+    padding: 8px 12px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;700&family=Lora&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/signup.css">
+    <title>Markdown</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center">
+        <div class="container">
+            <a href="/" class="navbar-brand d-flex me-auto">Mark<span>It</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="card px-5 py-5" id="form1">
+                    <div class="form-data" v-if="!submitted">
+
+                        <!-- <form onsubmit="return false;" id="form"> -->
+                        <form action="/signup" method="post" id="form">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="email">Email address</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="username">Username</label>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4 ">
+                                <label class="form-label " for="password">Password</label>
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+
+                            <!-- Confirm Password input -->
+                            <div class="form-outline mb-4 ">
+                                <label class="form-label " for="form2Example2">Confirm Password</label>
+                                <input type="password" name="password2" id="password2" class="form-control">
+                            </div>
+
+
+                            <!-- Submit button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-block mb-4" id="login-btn">Sign
+                                    up</button>
+                            </div>
+                            <div class="text-center">
+                                <p>Already a member? <a href="/login">Login</a></p>
+                            </div>
+                        </form>
+                        <div class="alert alert-danger" role="alert" id="error" style="display : none;"></div>
+                        <div class="alert alert-success" role="alert" id="success" style="display : none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('layouts/flash-messages') %>
+</body>
+
+</html>
